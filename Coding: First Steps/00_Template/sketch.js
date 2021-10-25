@@ -27,6 +27,8 @@ function draw() {
 
 }
 
+
+//💡Dain: addEventlistener('resize');
 function windowResized() {
   WIDTH = window.innerWidth;
   HEIGHT = window.innerHeight;
