@@ -2,7 +2,7 @@
 ## ⏰ Zeit Visualisierung
 #### 📍 Location : Coding: First Steps / 00_Template
 #### ✅ Updated : 25.10.21
-#### 
+#### 🦹🏻‍♂️ : Ich habe noch nicht Refactoring gemacht. später werde ich machen.
 ----------------
 <br /><br /><br /><br /><br /><br /><br />
 # Coding for Informationdesign
