@@ -17,6 +17,8 @@ let minutes = 0;
 let secondt;
 let minuteBall;
 let hourBall;
+let bgLine;
+let bgLineA = [];
 function setup() {
   createCanvas(WIDTH, HEIGHT);
   background(0,0,0,255);
@@ -28,6 +30,10 @@ function setup() {
   secondt = new Secondt();
   minuteBall = new MinuteBall(0, 40);
   hourBall = new HourBall(0, 30);
+  for(let i = 0; i < 120; i++){
+    bgLineA.push(new Bg());
+  }
+  bgLine = new Bg();
 
 }
 
@@ -37,8 +43,24 @@ function draw() {
   noStroke();
   translate(WIDTH/2, HEIGHT/2);
   rotate(180);
+
+  
   //zeit
   // 😊ES6
+  
+  bgLine.draw();
+  
+  bgLineA.map((line) => {
+    line.draw();
+    line.move();
+
+  })
+
+  
+  fill(0);
+  noStroke();
+  // circle(0, 0, HEIGHT/1.3);
+  fill(255);
   date = new Date();
   let seconds = date.getSeconds();
   let minutesE = date.getMinutes();
@@ -54,7 +76,7 @@ function draw() {
   sec = 0.1;
   time += sec;
   minutes += sec;
-  
+  noStroke();
   secondballs.map((ball) => {
     ball.draw();
     ball.move(time);

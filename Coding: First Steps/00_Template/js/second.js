@@ -15,7 +15,7 @@ class SecondBall {
 
     move(time){
         // this.a = (-(s * 6));
-        this.size = sin(this.t + this.a) * 10;
+        this.size = sin(this.t + this.a) * 20;
         this.t = time;
         this.x = (sin(this.a) * HEIGHT/2.5 + (sin(this.t + this.a) * 10)); 
         this.y = (cos(this.a) * HEIGHT/2.5 + (-tan(this.t + this.a) * 10));
