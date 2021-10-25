@@ -1,11 +1,12 @@
 
-const WIDTH = window.innerWidth;
-const HEIGHT = window.innerHeight;
+let WIDTH = window.innerWidth;
+let HEIGHT = window.innerHeight;
 
 let time = 0;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  
+  createCanvas(WIDTH, HEIGHT);
 
 }
 
