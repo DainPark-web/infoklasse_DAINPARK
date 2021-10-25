@@ -1,17 +1,22 @@
 class SecondBall {
-    constructor(){
-        this.x = WIDTH/2;
-        this.y = HEIGHT/2;
+    constructor(a, size){
+        this.x = 0
+        this.y = 0
+        this.size = size;
+        this.a = a;
 
-        this.a = 50;
+        this.t = 0;
     }
 
     draw(){
-        ellipse(this.x, HEIGHT/2, 40, 40);
+        ellipse(this.x, this.y, this.size, this.size);
     }
 
-    move(){
-       
-        this.x = (sin(this.a) * 500) + WIDTH/2;
+    move(time){
+        // this.a = (-(s * 6));
+        this.size = sin(this.t + this.a) * 20;
+        this.t = time;
+        this.x = (sin(this.a) * HEIGHT/3 + (sin(this.t + this.a) * 10)); 
+        this.y = (cos(this.a) * HEIGHT/3 + (-tan(this.t + this.a) * 10));
     }
 }
