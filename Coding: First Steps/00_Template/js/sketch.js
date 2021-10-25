@@ -1,6 +1,8 @@
 let WIDTH = window.innerWidth;
 let HEIGHT = window.innerHeight;
 
+
+
 let time = 0;
 
 let ball;
@@ -10,10 +12,10 @@ function setup() {
   
   createCanvas(WIDTH, HEIGHT);
   background(0,0,0,255);
-  for(let i = 0; i < 200; i++){
+  for(let i = 0; i < 2; i++){
     ballH.push(new Ball(WIDTH, HEIGHT));
   }
-
+  console.log('dains')
 
 }
 
@@ -22,6 +24,10 @@ function draw() {
   time += 0.1;
   background(0,0,0,7);
 
+  //Seconds
+  let date = new Date();
+  console.log(date.getSeconds());
+  
   for(let i = 0; i < ballH.length; i++){
     ballH[i].draw();
     ballH[i].move();
