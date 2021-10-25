@@ -1,18 +1,22 @@
-
 let WIDTH = window.innerWidth;
 let HEIGHT = window.innerHeight;
 
 let time = 0;
 
+let ball;
+
 function setup() {
   
   createCanvas(WIDTH, HEIGHT);
+
+  ball = new Ball();
 
 }
 
 function draw() {
   time += 0.1;
   background(220);
+  ball.draw();
   // ellipse(50,50,80,random(50));
   ellipse((sin(time) * 59) + WIDTH/2,(cos(time) * 59) + HEIGHT/2,80,80);
 
