@@ -18,6 +18,7 @@ function draw() {
   background(220);
   ball.draw();
   // ellipse(50,50,80,random(50));
+  fill(0, 200, 0);
   ellipse((sin(time) * 59) + WIDTH/2,(cos(time) * 59) + HEIGHT/2,80,80);
 
 
