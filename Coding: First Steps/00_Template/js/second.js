@@ -10,13 +10,14 @@ class SecondBall {
 
     draw(){
         ellipse(this.x, this.y, this.size, this.size);
+        
     }
 
     move(time){
         // this.a = (-(s * 6));
-        this.size = sin(this.t + this.a) * 20;
+        this.size = sin(this.t + this.a) * 10;
         this.t = time;
-        this.x = (sin(this.a) * HEIGHT/3 + (sin(this.t + this.a) * 10)); 
-        this.y = (cos(this.a) * HEIGHT/3 + (-tan(this.t + this.a) * 10));
+        this.x = (sin(this.a) * HEIGHT/2.5 + (sin(this.t + this.a) * 10)); 
+        this.y = (cos(this.a) * HEIGHT/2.5 + (-tan(this.t + this.a) * 10));
     }
 }
