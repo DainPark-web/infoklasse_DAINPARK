@@ -28,8 +28,8 @@ function setup() {
     secondballs.push(new SecondBall(secondsAngle * i, 10));
   }
   secondt = new Secondt();
-  minuteBall = new MinuteBall(0, 40);
-  hourBall = new HourBall(0, 30);
+  minuteBall = new MinuteBall(0, 30);
+  hourBall = new HourBall(0, 50);
   for(let i = 0; i < 120; i++){
     bgLineA.push(new Bg());
   }
