@@ -23,7 +23,7 @@ function setup() {
   createCanvas(WIDTH, HEIGHT);
   background(0,0,0,255);
   angleMode(DEGREES);
- 
+  frameRate(30);
   for(let i = 0; i < 60; i++){
     secondballs.push(new SecondBall(secondsAngle * i, 10));
   }
@@ -70,10 +70,10 @@ function draw() {
   s = second();
   m = minute();
   h = hour();
-  
+  // console.log(seconds);
 
   //second
-  sec = 0.1;
+  sec = 0.20;
   time += sec;
   minutes += sec;
   noStroke();
