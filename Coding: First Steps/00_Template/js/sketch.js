@@ -19,20 +19,28 @@ let minuteBall;
 let hourBall;
 let bgLine;
 let bgLineA = [];
+
+
 function setup() {
   createCanvas(WIDTH, HEIGHT);
   background(0,0,0,255);
   angleMode(DEGREES);
   frameRate(30);
+  //seconds ball
   for(let i = 0; i < 60; i++){
     secondballs.push(new SecondBall(secondsAngle * i, 10));
   }
-  secondt = new Secondt();
+  // secondt = new Secondt();
+
+  //mintuesball
   minuteBall = new MinuteBall(0, 30);
+  //hour
   hourBall = new HourBall(0, 50);
   for(let i = 0; i < 120; i++){
     bgLineA.push(new Bg());
   }
+
+  //bglines
   bgLine = new Bg();
 
 }
@@ -43,26 +51,23 @@ function draw() {
   noStroke();
   translate(WIDTH/2, HEIGHT/2);
   rotate(180);
-
+  fill(255);
   
-  //zeit
-  // 😊ES6
-  
+ 
+  //lines background 
   bgLine.draw();
-  
   bgLineA.map((line) => {
     line.draw();
     line.move();
 
   })
 
+   //zeit
+  // 😊ES6
+
   
-  fill(0);
-  noStroke();
-  // circle(0, 0, HEIGHT/1.3);
-  fill(255);
   date = new Date();
-  let seconds = date.getSeconds();
+  // let seconds = date.getSeconds();
   let minutesE = date.getMinutes();
   let houres = date.getHours();
   
@@ -70,20 +75,20 @@ function draw() {
   s = second();
   m = minute();
   h = hour();
-  // console.log(seconds);
+ 
 
   //second
   sec = 0.20;
   time += sec;
-  minutes += sec;
+ 
   noStroke();
   secondballs.map((ball) => {
     ball.draw();
     ball.move(time);
   });
-  // secondt.draw();
-  // secondt.move(minutes);
+  
 
+  push();
   stroke(255);
   strokeWeight(1);
   minuteBall.draw();
@@ -91,19 +96,10 @@ function draw() {
   
   hourBall.draw();
   hourBall.move(houres%12);
+  pop();
   
-//houres/2 - 1
-  
 
 
-
-
-  //LEARNINGS
-  //zeige draw spezifikationen 
-  // console log zeigen
-  // random werte zeigen
-  // random werte aufrunden (floor) zeigen
-  
 
 }
 
