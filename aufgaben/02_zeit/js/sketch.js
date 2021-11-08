@@ -19,20 +19,33 @@ function draw(){
     let s = getTime.getSeconds();   // seconds
     let m = getTime.getMinutes();
 
-    fill(255);
-    // noStroke();
     const secContainerWidth = WIDTH/1.2;
     const rectSize = secContainerWidth/60;
     const rectGap = secContainerWidth/60;
+
+
+    //Sec
+    push();
     let j = 0;
     for(let i = 0; i < s; i++){
         if(i % 10 === 0){
             j += 1;
         }
+        fill(100 + j * 50);
         rect(rectSize + rectGap * i, rectSize + rectGap * j, rectSize, rectSize);
     }
+    pop();
+
+    //Min
+    const gapSecMin = rectSize*8 + ((rectSize * 6)/2);
     for(let i = 0; i < m; i++){
-        
+        let j = 0;
+        if(i % 2 === 0){
+            j = 1;
+        }else{
+            j = 0;
+        }
+        rect(rectSize + rectGap * i, rectSize + gapSecMin + j * 50, rectSize, rectSize* 6 );
     }
 }
 
