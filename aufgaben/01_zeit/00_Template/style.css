@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+main{
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: -1;
+}
+
+#name{
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    /* transform: translateX(-50%); */
+    
+    font-weight: 500;
+    font-size: calc(10px + 0.5vw);
+    text-decoration: none;
+    color: white;
+    transition: 0.2s ease-in-out;
+    text-transform: uppercase;
+}
+
+
+#name:hover{
+    opacity: 0.5;
+    transform: translateX(5%);
+}
+
+.date{
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    color: rgba(255,255,255, 0.5);
+    font-size: 13px;
+}
+.info{
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+    color: rgba(255,255,255, 0.5);
+    font-size: 15px;
+}
