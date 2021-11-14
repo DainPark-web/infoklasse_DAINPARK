@@ -68,8 +68,11 @@ function draw() {
   background(0);
   var s = now.sec
   var m = now.min
-  var h = now.hours
-  // console.log(h)
+  var h = now.hour
+  var h2 = now.hours
+
+  let ampm = String(now.text.ampm) === "P.M.";
+  // console.log(h);
   time += 0.4;
   translate(WIDTH/2, HEIGHT/2);
   angleMode(DEGREES);
@@ -92,14 +95,55 @@ function draw() {
 
   for(let i = 0; i < m; i++ ){
     let x = 0;
-    let y = -250;
+    let y = -250 - sin(i * time) * 5;
     push();
     rotate(6 * i);
-    
     circle(x, y, 10);
     pop();
     }
-  }
+
+
+    noFill();
+    beginShape();
+    
+    for(let i = 0; i < h; i++){
+    let r = 350 + sin(i * time / 2) * 20;
+    let x = 0;
+    let y = -r;
+    let a = 30 * i;
+    push();
+    rotate(a);
+
+    
+    let x2 = cos((i - 3) * 30) * r;
+    let y2 = sin((i - 3) * 30) * r;
   
+  
+    
+    vertex(x2, y2);
+
+
+
+    
+    
+    if(1 <= h2 && h2 <= 12){
+      push();
+      fill(255);
+      circle(x, y, 30);
+      pop();
+    }
+    if(h2 > 12){
+      push();
+      fill(100);
+      noStroke();
+      circle(x, y, 30);
+      pop();
+    }
+    
+    pop();
+  }
+  endShape();
+
+  }
 
 
