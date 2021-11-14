@@ -51,9 +51,11 @@
 //now.text.day     // "31"
 //now.text.weekday // "Monday"
 
-
+let WIDTH = 800;
+let HEIGHT = 800;
+let time = 0;
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(WIDTH, HEIGHT);
   stroke(255);  
 
 }
@@ -63,14 +65,41 @@ function draw() {
   var now = clock()
   const zeitDate = new Date();
   const se = zeitDate.getSeconds();
-  background('black');
-  var h = now.sec
+  background(0);
+  var s = now.sec
   var m = now.min
-  var s = now.hours
+  var h = now.hours
   // console.log(h)
+  time += 0.4;
+  translate(WIDTH/2, HEIGHT/2);
+  angleMode(DEGREES);
+  //center
+  fill(255);
+  stroke(255);
+  strokeWeight(2);
+  circle(0,0, 10);
+  //sec
+ 
+  for(let i = 0; i < s; i++){
+    let x = 0;
+    let y = -50;
+    let y2 = -200 - sin(i * time) * 10;
+    push();
+    rotate(6 * i);
+    line(x, y, x, y2 );
+    pop();
+  }
 
-  push();
-  pop();
+  for(let i = 0; i < m; i++ ){
+    let x = 0;
+    let y = -250;
+    push();
+    rotate(6 * i);
+    
+    circle(x, y, 10);
+    pop();
+    }
+  }
+  
 
 
-}
