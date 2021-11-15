@@ -71,7 +71,7 @@ function draw() {
   var h = now.hour
   var h2 = now.hours
 
-  let ampm = String(now.text.ampm) === "P.M.";
+  // let ampm = String(now.text.ampm) === "P.M.";
   // console.log(h);
   time += 0.4;
   translate(WIDTH/2, HEIGHT/2);
