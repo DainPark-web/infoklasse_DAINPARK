@@ -8,6 +8,8 @@ let time = 0;
 let speed = 0.01;
 let acc = 0.1;
 let ballList = [];
+let ballListT = [];
+let ballListH = [];
 
 let colors = [
     "#6B4A8C",
@@ -27,6 +29,12 @@ function setup(){
     for(let i =0; i < 30; i++){
         ballList[i] = new Ball(0, 0, 30, colors[floor(random(5))]);
     }
+    for(let i =0; i < 30; i++){
+        ballListT[i] = new BallT(0, 0, 30, colors[floor(random(5))]);
+    }
+    for(let i =0; i < 10; i++){
+        ballListH[i] = new BallH(0, 0, 30, colors[floor(random(5))]);
+    }
 
     bg.noStroke();
     bg.background(20, 30);
@@ -45,28 +53,45 @@ function draw(){
   
     time += speed;
     acc += speed;
-    let mouseW = map(mouseX, 0, width, -50, 50);
+    let mouseW = map(mouseX, 0, width, -100, 100);
     //circle
     push()
-        // translate(width/2, height/2);
-        // rotate(180);
-        // stroke(0, 200, 100);
+        // translate(0, -height/4, 0);
+       
         noStroke();
+       
+        for(let i = 0; i< ballListT.length; i++){
+            ballListT[i].draw(abs(mouseW));
+            ballListT[i].move(time, i, acc);
+        }
+        
+    
+    pop();
+    push()
+        // translate(0, -height/4, 0);
+       
+        noStroke();
+       
+        
         for(let i = 0; i< ballList.length; i++){
             ballList[i].draw();
             ballList[i].move(time, i, acc);
         }
         
-        // beginShape(POINTS);
-        //     for(let i = 0; i < 19; i++){
-        //         // strokeWeight(abs(mouseW) + (sin(time + (i * 0.1)) * 90));
-               
-        //         // strokeWeight( abs(sin(time) * 50));
-        //         // vertex(sin(i * 20) * (r + sin(time + i) * (80 + abs(mouseW))), cos(i * 20) * (r + cos(time) * (80 + abs(mouseW))));
-               
-        //     }
-
-        // endShape();
+    
+    pop();
+    push()
+        // translate(0, -height/4, 0);
+       
+        noStroke();
+       
+        
+        for(let i = 0; i< ballListH.length; i++){
+            ballListH[i].draw();
+            ballListH[i].move(time, i, acc);
+        }
+        
+    
     pop();
 
     image(bg, 0 - width/2, 0- height/2);
