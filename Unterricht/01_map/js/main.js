@@ -5,7 +5,17 @@ let bg;
 let r = 200;
 
 let time = 0;
+let speed = 0.01;
+let acc = 0.1;
 let ballList = [];
+
+let colors = [
+    "#6B4A8C",
+    "#4637A6",
+    "#B5B4D9",
+    "#05C7F2",
+    "#F2A766"
+];
 
 function setup(){
     createCanvas(innerWidth, innerHeight);
@@ -14,8 +24,8 @@ function setup(){
 
     angleMode(DEGREES);
     //bg
-    for(let i =0; i < 20; i++){
-        ballList[i] = new Ball(0, 0, 30);
+    for(let i =0; i < 30; i++){
+        ballList[i] = new Ball(0, 0, 30, colors[floor(random(5))]);
     }
 
     bg.noStroke();
@@ -32,17 +42,19 @@ function setup(){
 
 function draw(){
     //time
-    time += 0.01;
+  
+    time += speed;
+    acc += speed;
     let mouseW = map(mouseX, 0, width, -50, 50);
     //circle
     push()
         translate(width/2, height/2);
-        rotate(sin(time* 0.1) * 360);
-        stroke(0, 200, 100);
-
+        // rotate(180);
+        // stroke(0, 200, 100);
+        noStroke();
         for(let i = 0; i< ballList.length; i++){
             ballList[i].draw();
-            ballList[i].move(time, i);
+            ballList[i].move(time, i, acc);
         }
         
         // beginShape(POINTS);
