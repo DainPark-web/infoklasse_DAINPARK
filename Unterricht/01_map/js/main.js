@@ -18,7 +18,7 @@ let colors = [
 ];
 
 function setup(){
-    createCanvas(innerWidth, innerHeight);
+    createCanvas(innerWidth, innerHeight, WEBGL);
     bg = createGraphics(innerWidth, innerHeight);
 
 
@@ -48,7 +48,7 @@ function draw(){
     let mouseW = map(mouseX, 0, width, -50, 50);
     //circle
     push()
-        translate(width/2, height/2);
+        // translate(width/2, height/2);
         // rotate(180);
         // stroke(0, 200, 100);
         noStroke();
@@ -69,7 +69,7 @@ function draw(){
         // endShape();
     pop();
 
-    image(bg, 0, 0,);
+    image(bg, 0 - width/2, 0- height/2);
 }
 
 // function windowResized(){
