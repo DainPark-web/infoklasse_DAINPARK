@@ -2,6 +2,8 @@ let data;
 let itemList = [];
 let HEIGHT = innerHeight;
 
+let bg;
+
 function preload() {
   data = loadTable('02_UFO_sightings_selection.csv', 'ssv', 'header');
 
@@ -12,8 +14,23 @@ function preload() {
 
 function setup() {
   createCanvas(innerWidth * 4, HEIGHT);
-  background("#F1E7DE")
+  // background("#F1E7DE")
   angleMode(DEGREES);
+
+  bg = createGraphics(innerWidth * 4, innerHeight);
+  bg.background(10);
+  bg.noStroke();
+
+  for(let i = 0; i < 30000; i++){
+    let x = random(innerWidth * 4);
+    let y = random(innerHeight);
+    let n = noise(x * 0.01, y * 0.01) * 2;
+   
+    bg.fill(255, 150);
+    bg.rect(x, y, n, n);
+    
+  }
+  image(bg, 0, 0);
  
   let dur = data.getColumn("duration (seconds)");
   // let minDur = min(dur)
@@ -43,5 +60,9 @@ function setup() {
 
 }
 
-function draw() {}
+function draw() {
+
+
+
+}
 

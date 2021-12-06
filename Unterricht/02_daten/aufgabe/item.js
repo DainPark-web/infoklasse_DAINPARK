@@ -14,14 +14,15 @@ class Item{
         //text
         rotate(40);
         push();
-        fill("#232020");
+        fill("#fff");
         textSize(14);
         textStyle(BOLD);
-        text(this.cityName, 0, 10);
+        text(this.cityName, 0, 20);
         pop();
         
         push();
-        rotate(-90)
+        rotate(-90);
+        fill(200);
         text("Duration :" + this.dur, 20, -10);
         pop();
 
@@ -29,7 +30,7 @@ class Item{
 
         
         rotate(-180)
-        fill(10, 50, 60);
+        fill(255);
         triangle(-5, 10, 0, log(this.dur) * 100, 5, 10);
         
 
