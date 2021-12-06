@@ -14,12 +14,20 @@ class Item{
         //text
         rotate(40);
         push();
-
         fill("#232020");
         textSize(14);
         textStyle(BOLD);
         text(this.cityName, 0, 10);
         pop();
+        
+        push();
+        rotate(-90)
+        text("Duration :" + this.dur, 20, -10);
+        pop();
+
+        //text2
+
+        
         rotate(-180)
         fill(10, 50, 60);
         triangle(-5, 10, 0, log(this.dur) * 100, 5, 10);
@@ -47,21 +55,24 @@ class Item{
                 pop();
                 break;
             case "sphere" : 
+                fill("#F28C0F");
                 circle(0, log(this.dur) * 100 + 50, 20);
                 circle(0, log(this.dur) * 100 + 75, 20);
                 break;
             case "fireball" :
+                fill("#8C3048");
                 ellipse(0, log(this.dur) * 100 + 50, 50, 20);
                 ellipse(0, log(this.dur) * 100 + 60, 30, 20);
                 ellipse(0, log(this.dur) * 100 + 80, 10, 10);
                 break;
             case "oval":
+                fill("#051259");
                 triangle(-10, log(this.dur) * 100 + 50, 0, log(this.dur) * 100 + 80, 10, log(this.dur) * 100 + 50);
                 break;
             default :
                 push();
                 fill(100, 100, 100);
-                circle(0, log(this.dur) * 100 + 50, 20);
+                circle(0, log(this.dur) * 100 + 50, 10);
                 pop();
                 break;
 
@@ -69,6 +80,8 @@ class Item{
        
         pop();
     }
+
+    
 
 
 }

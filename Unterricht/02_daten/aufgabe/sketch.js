@@ -1,12 +1,8 @@
 let data;
-
 let itemList = [];
-let r = 300;
-
 let HEIGHT = innerHeight;
 
 function preload() {
-
   data = loadTable('02_UFO_sightings_selection.csv', 'ssv', 'header');
 
 }
@@ -18,16 +14,10 @@ function setup() {
   createCanvas(innerWidth * 4, HEIGHT);
   background("#F1E7DE")
   angleMode(DEGREES);
-  //length
-  // console.log("Rowcount= " + data.getRowCount());
-  // console.log(data.columns);
-
+ 
   let dur = data.getColumn("duration (seconds)");
-  let minDur = min(dur)
-  let maxDur = max(dur)
-  // console.log(dur)
-  // console.log(minDur)
-  // console.log(maxDur)
+  // let minDur = min(dur)
+  // let maxDur = max(dur)
 
 
   for (var i = 0; i < data.getRowCount(); i++) {
@@ -36,8 +26,6 @@ function setup() {
     let columnShape = data.getString(i, "shape");
     let columnDuration = data.getNum(i, "duration (seconds)");
   
-    
-
     //🍎item
     itemList.push(new Item(
       i * 100 + 100,
