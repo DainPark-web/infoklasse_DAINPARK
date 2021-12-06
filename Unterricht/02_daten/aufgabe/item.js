@@ -67,13 +67,13 @@ class Item{
                 ellipse(0, log(this.dur) * 100 + 80, 10, 10);
                 break;
             case "oval":
-                fill("#051259");
+                fill("#F2B6C6");
                 triangle(-10, log(this.dur) * 100 + 50, 0, log(this.dur) * 100 + 80, 10, log(this.dur) * 100 + 50);
                 break;
             default :
                 push();
-                fill(100, 100, 100);
-                circle(0, log(this.dur) * 100 + 50, 10);
+                fill(200);
+                circle(0, log(this.dur) * 100 + 50, 5);
                 pop();
                 break;
 

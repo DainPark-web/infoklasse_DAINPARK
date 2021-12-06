@@ -17,6 +17,7 @@ function setup() {
   // background("#F1E7DE")
   angleMode(DEGREES);
 
+  //bg
   bg = createGraphics(innerWidth * 4, innerHeight);
   bg.background(10);
   bg.noStroke();
