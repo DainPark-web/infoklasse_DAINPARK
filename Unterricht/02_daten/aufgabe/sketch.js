@@ -22,6 +22,7 @@ function setup() {
   bg.background(10);
   bg.noStroke();
 
+  //kleine Sterne
   for(let i = 0; i < 30000; i++){
     let x = random(innerWidth * 5);
     let y = random(innerHeight);
@@ -31,6 +32,7 @@ function setup() {
     bg.rect(x, y, n, n);
     
   }
+  //grosse Sterne
   for(let i = 0; i < 1000; i++){
     let x = random(innerWidth * 5);
     let y = random(innerHeight);
@@ -40,6 +42,7 @@ function setup() {
     bg.circle(x, y, n);
     
   }
+  //Rendering Sterne
   image(bg, 0, 0);
  
   // let dur = data.getColumn("duration (seconds)");
