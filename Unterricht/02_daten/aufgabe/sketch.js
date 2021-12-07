@@ -13,18 +13,18 @@ function preload() {
 
 
 function setup() {
-  createCanvas(innerWidth * 4, HEIGHT);
+  createCanvas(innerWidth * 5, HEIGHT);
   // background("#F1E7DE")
   angleMode(DEGREES);
   rectMode(CENTER);
 
   //bg
-  bg = createGraphics(innerWidth * 4, innerHeight);
+  bg = createGraphics(innerWidth * 5, innerHeight);
   bg.background(10);
   bg.noStroke();
 
   for(let i = 0; i < 30000; i++){
-    let x = random(innerWidth * 4);
+    let x = random(innerWidth * 5);
     let y = random(innerHeight);
     let n = noise(x * 0.01, y * 0.01) * 2;
    
