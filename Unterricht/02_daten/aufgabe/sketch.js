@@ -44,6 +44,7 @@ function setup() {
     let columnName = data.getString(i, "city").charAt(0).toUpperCase() + data.getString(i, "city").slice(1);
     let columnShape = data.getString(i, "shape");
     let columnDuration = data.getNum(i, "duration (seconds)");
+    let columnDurationText = data.getString(i, "duration (hours/min)");
   
     //🍎item
     itemList.push(new Item(
@@ -51,7 +52,8 @@ function setup() {
       HEIGHT-100, 
       columnName.length > 13 ? columnName.slice(0, 13) + "..." : columnName,
       columnDuration,
-      columnShape
+      columnShape,
+      columnDurationText
       )
       );
 

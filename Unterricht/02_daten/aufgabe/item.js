@@ -1,9 +1,10 @@
 class Item{
-    constructor(posX, posY, city, duration, shape){
+    constructor(posX, posY, city, duration, shape, durname){
         this.pos = createVector(posX, posY);
         this.cityName = city;
         this.dur = duration;
         this.shape = shape;
+        this.durname = durname;
     }
 
     draw(){
@@ -23,7 +24,7 @@ class Item{
         push();
         rotate(-90);
         fill(200);
-        text("Duration :" + this.dur, 20, -10);
+        text(this.durname, 20, -10);
         pop();
 
         //text2
