@@ -70,6 +70,35 @@ class Item{
                 fill("#F2B6C6");
                 triangle(-10, log(this.dur) * 100 + 50, 0, log(this.dur) * 100 + 80, 10, log(this.dur) * 100 + 50);
                 break;
+            case "rectangle":
+                fill(200, 100, 100);
+                rect(0, log(this.dur) * 100 + 50, 30, 30);
+                break;
+            case "chevron":
+                fill(100, 200, 200);
+                rect(0, log(this.dur) * 100 + 50, 10, 30);
+                rect(0, log(this.dur) * 100 + 50, 30, 10);
+                break;
+            case "other":
+                push();
+                noFill()
+                stroke(100, 130, 150);
+                strokeWeight(6);
+                rect(0, log(this.dur) * 100 + 50, 20, 20);
+                pop();
+                break;
+            case "formation":
+                push();
+                noFill();
+                stroke("#F28C0F");
+                strokeWeight(6);
+              
+                ellipse(0, log(this.dur) * 100 + 50, 10, 30);
+                ellipse(10, log(this.dur) * 100 + 50, 10, 30);
+                ellipse(-10, log(this.dur) * 100 + 50, 10, 30);
+               
+                pop();
+                break;
             default :
                 push();
                 fill(200);

@@ -16,6 +16,7 @@ function setup() {
   createCanvas(innerWidth * 4, HEIGHT);
   // background("#F1E7DE")
   angleMode(DEGREES);
+  rectMode(CENTER);
 
   //bg
   bg = createGraphics(innerWidth * 4, innerHeight);
@@ -58,6 +59,9 @@ function setup() {
   for(let i = 0; i< itemList.length; i++){
     itemList[i].draw();
   }
+
+  //unit testing
+  // rect(0, 0, 30, 30);
 
 }
 
