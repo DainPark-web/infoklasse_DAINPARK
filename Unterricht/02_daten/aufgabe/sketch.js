@@ -14,7 +14,6 @@ function preload() {
 
 function setup() {
   createCanvas(innerWidth * 5, HEIGHT);
-  // background("#F1E7DE")
   angleMode(DEGREES);
   rectMode(CENTER);
 
@@ -28,13 +27,22 @@ function setup() {
     let y = random(innerHeight);
     let n = noise(x * 0.01, y * 0.01) * 2;
    
-    bg.fill(255, 150);
+    bg.fill(255, 100);
     bg.rect(x, y, n, n);
+    
+  }
+  for(let i = 0; i < 1000; i++){
+    let x = random(innerWidth * 5);
+    let y = random(innerHeight);
+    let n = noise(x * 0.01, y * 0.01) * 4;
+   
+    bg.fill(255, 150);
+    bg.circle(x, y, n);
     
   }
   image(bg, 0, 0);
  
-  let dur = data.getColumn("duration (seconds)");
+  // let dur = data.getColumn("duration (seconds)");
   // let minDur = min(dur)
   // let maxDur = max(dur)
 
@@ -62,7 +70,7 @@ function setup() {
     itemList[i].draw();
   }
 
-  //unit testing
+  //👀unit testing
   // rect(0, 0, 30, 30);
 
 }

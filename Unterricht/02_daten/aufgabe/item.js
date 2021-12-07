@@ -12,7 +12,7 @@ class Item{
         translate(this.pos.x, this.pos.y);
         circle(0, 0, 4);
        
-        //text
+        //text : city
         rotate(40);
         push();
         fill("#fff");
@@ -21,22 +21,22 @@ class Item{
         text(this.cityName, 0, 20);
         pop();
         
+        //text : duration hours/min
         push();
         rotate(-90);
         fill(200);
         text(this.durname, 20, -10);
         pop();
 
-        //text2
 
         
+        //duration : seconds
         rotate(-180)
         fill(255);
         triangle(-5, 10, 0, log(this.dur) * 100, 5, 10);
         
 
         //shape
-
         switch (this.shape){
             case "circle" :
                 fill(200, 100, 100);
