@@ -11,7 +11,7 @@
 
 circle packing 
 pie tortus
-
+[circle packing](https://en.wikipedia.org/wiki/Circle_packing)
 
 1. Data => Data crunching
 2. Visularisierung
