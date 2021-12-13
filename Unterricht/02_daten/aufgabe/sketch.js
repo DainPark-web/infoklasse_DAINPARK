@@ -2,6 +2,20 @@ let data;
 let itemList = [];
 let HEIGHT = innerHeight;
 
+const COLORS = {
+  white: "#fff",
+  subText: "#D9D9D9",
+  shape: {
+    a1: "#8C3048",
+    a2: "#F2B6C6",
+    a3: "#91D9BF",
+    a4: "#F28C0F",
+    a5: "#BEA3D9",
+    a6: "#D99771"
+  }
+
+}
+
 let bg;
 
 function preload() {
@@ -64,7 +78,8 @@ function setup() {
       columnName.length > 13 ? columnName.slice(0, 13) + "..." : columnName,
       columnDuration,
       columnShape,
-      columnDurationText
+      columnDurationText,
+      COLORS
       )
       );
 
@@ -74,7 +89,7 @@ function setup() {
   }
 
   //👀unit testing
-  // rect(0, 0, 30, 30);
+  
 
 }
 

@@ -9,3 +9,11 @@
 #### ✅ Updated : 06.12.21
 
 
+circle packing 
+pie tortus
+
+
+1. Data => Data crunching
+2. Visularisierung
+3. checken 1. mit 2.
+4.

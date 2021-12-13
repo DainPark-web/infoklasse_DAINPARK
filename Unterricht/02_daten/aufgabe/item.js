@@ -1,10 +1,11 @@
 class Item{
-    constructor(posX, posY, city, duration, shape, durname){
+    constructor(posX, posY, city, duration, shape, durname, colors){
         this.pos = createVector(posX, posY);
         this.cityName = city;
         this.dur = duration;
         this.shape = shape;
         this.durname = durname;
+        this.colors = colors;
     }
 
     draw(){
@@ -15,7 +16,7 @@ class Item{
         //text : city
         rotate(40);
         push();
-        fill("#fff");
+        fill(this.colors.white);
         textSize(14);
         textStyle(BOLD);
         text(this.cityName, 0, 20);
@@ -24,7 +25,7 @@ class Item{
         //text : duration hours/min
         push();
         rotate(-90);
-        fill(200);
+        fill(this.colors.subText);
         text(this.durname, 20, -10);
         pop();
 
@@ -32,58 +33,58 @@ class Item{
         
         //duration : seconds
         rotate(-180)
-        fill(255);
+        fill(this.colors.white);
         triangle(-5, 10, 0, log(this.dur) * 100, 5, 10);
         
 
         //shape
         switch (this.shape){
             case "circle" :
-                fill(200, 100, 100);
+                fill(this.colors.shape.a1);
                 circle(0, log(this.dur) * 100 + 50, 30);
                 break;
             case "light" :
-                fill(100, 200, 200);
+                fill(this.colors.shape.a2);
                 ellipse(0, log(this.dur) * 100 + 50, 5, 30);
                 ellipse(0, log(this.dur) * 100 + 50, 30, 5);
                 break;
             case "cylinder" :
                 push();
                 noFill();
-                stroke(100, 130, 150);
+                stroke(this.colors.shape.a3);
                 strokeWeight(6);
               
                 ellipse(0, log(this.dur) * 100 + 50, 30, 20);
                 pop();
                 break;
             case "sphere" : 
-                fill("#F28C0F");
+                fill(this.colors.shape.a4);
                 circle(0, log(this.dur) * 100 + 50, 20);
                 circle(0, log(this.dur) * 100 + 75, 20);
                 break;
             case "fireball" :
-                fill("#8C3048");
+                fill(this.colors.shape.a5);
                 ellipse(0, log(this.dur) * 100 + 50, 50, 20);
                 ellipse(0, log(this.dur) * 100 + 60, 30, 20);
                 ellipse(0, log(this.dur) * 100 + 80, 10, 10);
                 break;
             case "oval":
-                fill("#F2B6C6");
+                fill(this.colors.shape.a6);
                 triangle(-10, log(this.dur) * 100 + 50, 0, log(this.dur) * 100 + 80, 10, log(this.dur) * 100 + 50);
                 break;
             case "rectangle":
-                fill(200, 100, 100);
+                fill(this.colors.shape.a1);
                 rect(0, log(this.dur) * 100 + 50, 30, 30);
                 break;
             case "chevron":
-                fill(100, 200, 200);
+                fill(this.colors.shape.a2);
                 rect(0, log(this.dur) * 100 + 50, 10, 30);
                 rect(0, log(this.dur) * 100 + 50, 30, 10);
                 break;
             case "other":
                 push();
                 noFill()
-                stroke(100, 130, 150);
+                stroke(this.colors.shape.a3);
                 strokeWeight(6);
                 rect(0, log(this.dur) * 100 + 50, 20, 20);
                 pop();
@@ -91,7 +92,7 @@ class Item{
             case "formation":
                 push();
                 noFill();
-                stroke("#F28C0F");
+                stroke(this.colors.shape.a4);
                 strokeWeight(6);
               
                 ellipse(0, log(this.dur) * 100 + 50, 10, 30);
@@ -103,7 +104,7 @@ class Item{
             default :
                 push();
                 fill(200);
-                circle(0, log(this.dur) * 100 + 50, 5);
+                circle(0, log(this.dur) * 100 + 50, 10);
                 pop();
                 break;
 
