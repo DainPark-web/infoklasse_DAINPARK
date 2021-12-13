@@ -13,5 +13,5 @@
 ## Verschiedene Charts für Infographik
 [circle packing](https://en.wikipedia.org/wiki/Circle_packing)<br>
 pie chart <br>
-donut chart
-
+donut chart<br>
+[voronoi](https://en.wikipedia.org/wiki/Voronoi_diagram)
