@@ -15,7 +15,3 @@
 pie chart <br>
 donut chart
 
-1. Data => Data crunching
-2. Visularisierung
-3. checken 1. mit 2.
-4.
