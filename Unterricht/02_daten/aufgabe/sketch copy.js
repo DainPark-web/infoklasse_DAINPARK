@@ -18,11 +18,6 @@ const COLORS = {
 
 let bg;
 let button;
-let btnB = true;
-
-let aLength = 80;
-
-let newArray = [];
 
 function preload() {
   data = loadTable('02_UFO_sightings_selection.csv', 'ssv', 'header');
@@ -36,7 +31,6 @@ function setup() {
   createCanvas(innerWidth * 5, HEIGHT);
   angleMode(DEGREES);
   rectMode(CENTER);
-  
 
   //bg
   bg = createGraphics(innerWidth * 5, innerHeight);
@@ -63,16 +57,14 @@ function setup() {
     bg.circle(x, y, n);
     
   }
+  //Rendering Sterne
   image(bg, 0, 0);
  
   // let dur = data.getColumn("duration (seconds)");
   // let minDur = min(dur)
   // let maxDur = max(dur)
 
-  //Rendering Sterne
-  console.log(data);
-  // data.sort((a, b) => a.rows.arr[7] - b.rows.arr[7]);
-  // console.log(data.rows);
+
   for (var i = 0; i < data.getRowCount(); i++) {
     noStroke();
     let columnName = data.getString(i, "city").charAt(0).toUpperCase() + data.getString(i, "city").slice(1);
@@ -82,7 +74,8 @@ function setup() {
   
     //🍎item
     itemList.push(new Item(
-      
+      i * 100 + 100,
+      HEIGHT-100, 
       columnName.length > 13 ? columnName.slice(0, 13) + "..." : columnName,
       columnDuration,
       columnShape,
@@ -92,50 +85,22 @@ function setup() {
       );
 
 }
-
-  itemList = itemList.slice(0, aLength);
-  itemList.sort((a, b) => a.dur - b.dur)
-  // newArray = [...itemList.sort((a, b) => a.dur - b.dur)];
-  console.log(itemList);
-
-//  i,
-// HEIGHT-100, 
-  //button
-button = createButton('Duration');
-button.position(10, 20);
-button.mousePressed(changeBG);
-
-  for(let i = 0; i < aLength; i++){
-    itemList[i].draw(i, HEIGHT-100,);
-    
+  for(let i = 0; i< itemList.length; i++){
+    itemList[i].draw();
   }
 
-}
-
-function draw() {
+  //button
+  button = createButton('click me');
+  button.position(0, 0);
+  button.mousePressed(changeBG);
   
-  
-  
-
 
 }
+
+function draw() {}
 
 function changeBG() {
-  
-  // aLength = 10
-  image(bg, 0, 0);
-  // Hier brauch ich itemList array sortieren.
-  if(btnB){
-    itemList.sort((a, b) => b.dur - a.dur)
-    btnB = false;
-  }else
- {
-    itemList.sort((a, b) => a.dur - b.dur)
-    btnB = true;
-  }
-  console.log(btnB);
-  for(let i = 0; i < aLength; i++){
-    itemList[i].draw(i, HEIGHT-100,);
-  }
+  let val = random(255);
+  background(val);
 }
 

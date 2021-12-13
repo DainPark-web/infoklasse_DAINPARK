@@ -1,6 +1,6 @@
 class Item{
-    constructor(posX, posY, city, duration, shape, durname, colors){
-        this.pos = createVector(posX, posY);
+    constructor(city, duration, shape, durname, colors){
+        this.pos = createVector(0, 0);
         this.cityName = city;
         this.dur = duration;
         this.shape = shape;
@@ -8,8 +8,9 @@ class Item{
         this.colors = colors;
     }
 
-    draw(){
+    draw(x, y){
         push();
+        this.pos = createVector(x * 100 + 100, y)
         translate(this.pos.x, this.pos.y);
         circle(0, 0, 4);
        

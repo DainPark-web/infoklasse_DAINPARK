@@ -15,3 +15,12 @@
 pie chart <br>
 donut chart<br>
 [voronoi](https://en.wikipedia.org/wiki/Voronoi_diagram)
+
+<br>
+plan<br>
+
+datei organisierung
+-[] sorting (shapes, duration, namen)<br>
+https://www.javascripttutorial.net/array/javascript-sort-an-array-of-objects/
+
+moment js
