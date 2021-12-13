@@ -9,9 +9,10 @@
 #### ✅ Updated : 06.12.21
 
 
-circle packing 
-pie tortus
-[circle packing](https://en.wikipedia.org/wiki/Circle_packing)
+circle packing<br>
+[circle packing](https://en.wikipedia.org/wiki/Circle_packing)<br>
+pie chart <br>
+donut chart
 
 1. Data => Data crunching
 2. Visularisierung
