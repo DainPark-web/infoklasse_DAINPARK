@@ -17,7 +17,10 @@ const COLORS = {
 }
 
 let bg;
-let button;
+let shapeBtn;
+let durBtn;
+let nameBtn;
+
 let btnB = true;
 
 let aLength = 80;
@@ -94,16 +97,25 @@ function setup() {
 }
 
   itemList = itemList.slice(0, aLength);
-  itemList.sort((a, b) => a.dur - b.dur)
+  // itemList.sort((a, b) => a.dur - b.dur)
+  // itemList.sort((a, b) => a.cityName.localeCompare(b.cityName))
   // newArray = [...itemList.sort((a, b) => a.dur - b.dur)];
   console.log(itemList);
 
 //  i,
 // HEIGHT-100, 
   //button
-button = createButton('Duration');
-button.position(10, 20);
-button.mousePressed(changeBG);
+shapeBtn = createButton('Shape');
+shapeBtn.position(10, 20);
+shapeBtn.mousePressed(() => changeBG(3));
+
+durBtn = createButton('dur');
+durBtn.position(10, 40);
+durBtn.mousePressed(() => changeBG(1));
+
+nameBtn = createButton('name');
+nameBtn.position(10, 60);
+nameBtn.mousePressed(() => changeBG(2));
 
   for(let i = 0; i < aLength; i++){
     itemList[i].draw(i, HEIGHT-100,);
@@ -120,20 +132,45 @@ function draw() {
 
 }
 
-function changeBG() {
-  
+function changeBG(e) {
+  console.log(e);
   // aLength = 10
   image(bg, 0, 0);
   // Hier brauch ich itemList array sortieren.
   if(btnB){
+    if(e === 1){
+    //dur
     itemList.sort((a, b) => b.dur - a.dur)
+    }
+    if(e === 2){
+    //name
+    itemList.sort((a, b) => a.cityName.localeCompare(b.cityName))
+    }
+    if(e === 3){
+    //shapes
+    itemList.sort((a, b) => a.shape.localeCompare(b.shape))
+    }
+   
+   
     btnB = false;
   }else
  {
+  if(e === 1){
+    //dur
     itemList.sort((a, b) => a.dur - b.dur)
+    }
+    if(e === 2){
+    //name
+    itemList.sort((a, b) => b.cityName.localeCompare(a.cityName))
+    }
+    if(e === 3){
+    //shapes
+    itemList.sort((a, b) => b.shape.localeCompare(a.shape))
+    }
+   
     btnB = true;
   }
-  console.log(btnB);
+ 
   for(let i = 0; i < aLength; i++){
     itemList[i].draw(i, HEIGHT-100,);
   }
