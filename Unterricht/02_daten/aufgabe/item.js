@@ -6,9 +6,10 @@ class Item{
         this.shape = shape;
         this.durname = durname;
         this.colors = colors;
+        
     }
 
-    draw(x, y){
+    draw(x, y, dis){
         push();
         this.pos = createVector(x * 100 + 100, y)
         translate(this.pos.x, this.pos.y);

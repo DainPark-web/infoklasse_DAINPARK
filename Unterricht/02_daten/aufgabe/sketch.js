@@ -32,7 +32,7 @@ function preload() {
 
 }
 
-
+let dis = 100;
 
 
 function setup() {
@@ -90,7 +90,8 @@ function setup() {
       columnDuration,
       columnShape,
       columnDurationText,
-      COLORS
+      COLORS,
+      
       )
       );
 
@@ -108,8 +109,6 @@ function setup() {
 shapeBtn = createButton('Shape');
 shapeBtn.position(10, 20);
 shapeBtn.mousePressed(() => changeBG(3));
-// shapeBtn.style('background-color', "rgba(0,0,0,0)");
-// shapeBtn.style("color", "#00b5e2"); 
 
 
 durBtn = createButton('Size');
@@ -120,8 +119,11 @@ nameBtn = createButton('A-Z');
 nameBtn.position(10, 100);
 nameBtn.mousePressed(() => changeBG(2));
 
+
+
+
   for(let i = 0; i < aLength; i++){
-    itemList[i].draw(i, HEIGHT-100,);
+    itemList[i].draw(i, HEIGHT-100);
     
   }
 
