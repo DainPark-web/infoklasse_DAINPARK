@@ -98,9 +98,7 @@ function setup() {
 }
 
   itemList = itemList.slice(0, aLength);
-  // itemList.sort((a, b) => a.dur - b.dur)
-  // itemList.sort((a, b) => a.cityName.localeCompare(b.cityName))
-  // newArray = [...itemList.sort((a, b) => a.dur - b.dur)];
+  
   console.log(itemList);
 
 //  i,
