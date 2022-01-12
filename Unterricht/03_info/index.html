@@ -4,16 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <nav>
+    <nav id="nav">
         <div>HI I'm DAIN PARK</div>
     </nav>
     <div id="container">
         <div class="box">
             <div class="item-1"> 
+                <div>
+                    <div id="ani-1">TEST-INFOINFO</div>
+                </div>
+                <div>
+                    <div id="ani-2">TEST-INFOINFO</div>
+                    
+                </div>
+                <div>
+                    <div id="ani-3">TEST-INFOINFO</div>
 
+                </div>
             </div>
             <div class="item-1"> 
 
@@ -49,112 +60,10 @@
         
     </div>
     
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        ::-webkit-scrollbar {
-            width: 0; 
-            background: transparent; 
-        }
-        nav{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 80px;
-            background-color: palevioletred;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        nav > div{
-            font-size: 40px;
-            font-weight: 700;
-        }
-        body{
-            background-color: yellowgreen;
-        }
-        .container{
-             background: red;
-        }
-        
-
-        .box {
-            width: 100%;
-            height: 100vh;
-            background-color: brown;
-            padding: 20px;
-        }
-
-        .box:nth-child(odd){
-            background-color: cornflowerblue;
-        }
-
-        .box:nth-child(1){
-            display: flex;
-            gap: 20px;
-        }
-        .item-1{
-            width: 50%;
-            height: calc(100% - 80px);
-            background-color: orange;
-            margin-top: 80px;
-        }
-        .item-2{
-            width: 50%;
-            height: calc(100% - 80px);
-            background-color: red;
-            margin-top: 80px;
-        }
-
-      
-        .box2-item-2{
-            width: 100%;
-            height: 100px;
-            background-color: orange;
-            margin-bottom: 20px;
-        }
-        .box2-item-2-2{
-            width: 100%;
-            height: calc(100vh - 160px);
-            background-color: orange;
-        }
-
-        .box:nth-child(3){
-            display: flex;
-            gap: 20px;
-        }
-
-        .item-3{
-            width: calc(100vw / 3);
-            height: 100%;
-            background-color: orange;
-        }
-
-        .item-3:nth-child(even){
-            
-            background-color: olivedrab;
-        }
-    </style>
+    
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-    <script>
-        var controller = new ScrollMagic.Controller();
-            
-            
-        var pin = new ScrollMagic.Scene({
-            offset: 0 ,// start this scene after scrolling for 50px
-            duration: 1000 // the scene should last for a scroll distance of 100px
-        }).setClassToggle('.item-1', '.item-2') // pins the element for the the scene's duration
-            
-        
-        
-        controller.addScene(pin);
-
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./index.js"></script>
 </body>
 </html>
