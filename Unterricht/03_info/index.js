@@ -16,8 +16,8 @@ gsap.to(".ani-5", {
       scrollTrigger: {
         trigger:".ani-5",
         markers:false,
-        start:"-50% 75%", //when top of herman passes 75% viewport height
-        end:"bottom 25%", //when bottom of herman passes 25% viewport height
+        start:"-50% 75%", 
+        end:"bottom 25%", 
         
              
         // toggleActions:"restart complete reverse reset"
@@ -38,8 +38,8 @@ gsap.to(".ani-6", {
       scrollTrigger: {
         trigger:".ani-6",
         markers:false,
-        start:"-50% 75%", //when top of herman passes 75% viewport height
-        end:"bottom 25%", //when bottom of herman passes 25% viewport height
+        start:"-50% 75%", 
+        end:"bottom 25%", 
         
              
         // toggleActions:"restart complete reverse reset"
