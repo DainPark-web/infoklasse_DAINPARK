@@ -1,5 +1,5 @@
 // init controller
-var tl = gsap.timeline();
+var tl = gsap.timeline({visibility: "hidden"});
 
 tl.from("#nav", {y:-200,duration: 2, ease: "power4.out"}, 0.1)
 tl.from("#ani-1", {x: -4000,opacity: 0, duration: 1, ease: "power4.out"}, 0.1)
@@ -15,7 +15,7 @@ gsap.to(".ani-5", {
     duration:2, y:-300, ease: "power4.out", 
       scrollTrigger: {
         trigger:".ani-5",
-        markers:true,
+        markers:false,
         start:"-50% 75%", //when top of herman passes 75% viewport height
         end:"bottom 25%", //when bottom of herman passes 25% viewport height
         
@@ -37,7 +37,7 @@ gsap.to(".ani-6", {
     duration: 6,backgroundColor: "blue", rotateY: 360, ease: "power4.out", 
       scrollTrigger: {
         trigger:".ani-6",
-        markers:true,
+        markers:false,
         start:"-50% 75%", //when top of herman passes 75% viewport height
         end:"bottom 25%", //when bottom of herman passes 25% viewport height
         
