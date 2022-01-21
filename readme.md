@@ -8,6 +8,11 @@
 #### 📍 Location : Unterricht / 02_daten / aufgaben
 #### ✅ Updated : 06.12.21
 
+# <strong>⭐️Aufgaben3⭐️</strong>
+## ⏰ Datensatz Visualisierung
+#### 📍 Location : aufgaben / 04_Storytelling
+#### ✅ Updated : 22.01.22
+
 <br><br>
 
 ## Verschiedene Charts für Infographik
