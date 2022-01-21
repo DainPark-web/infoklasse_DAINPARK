@@ -46,6 +46,7 @@ body{
     height: 100vh;
     position: relative;
     color: var(--font-color);
+    overflow: hidden;
 }
 .item_container:nth-child(1){
     text-transform: uppercase;
@@ -72,7 +73,15 @@ body{
 }
 
 #logoContainer{
+    width: 100vw;
+    height: 100vh;
     position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+#logoBox{
+    position: absolute;
     top:50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -96,4 +105,118 @@ body{
     background-position: 10px 10px;
     
 
+}
+#logoTextContainer{
+    width: 100%;
+    height: 55px;
+    position: absolute;
+    top:50%;
+    left: 53%;
+    transform: translate(0%,-50%);
+    font-size: 50px;
+    opacity: 0;
+    /* background: red; */
+    overflow: hidden;
+    line-height: 1;
+}
+#logoTextBox{
+    transform: translateY(0px);
+
+}
+
+
+
+.FotoContainer{
+    width: 100%;
+    height: 80vh;
+    /* background: red; */
+    position: absolute;
+    bottom: 0%;
+    overflow: hidden;
+
+    padding: 30px 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+.FotoContainer2{
+    width: 200vw;
+    height: 80vh;
+    /* background: red; */
+    position: fixed;
+    bottom: 0%;
+    overflow: hidden;
+
+    padding: 30px 100px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+    transform: translateX(100%);
+}
+.fotoItemContainer{
+    /* background: blue; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.foto{
+    border-radius: 20px;
+}
+
+
+.fotoItemContainer:nth-child(1) > .foto{
+    background: url(./assets/1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.fotoItemContainer:nth-child(2) > .foto{
+    background: url(./assets/2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.fotoItemContainer:nth-child(3) > .foto{
+    background: url(./assets/3.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+.foto::after{
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.fotoTitle{
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.main4{
+    height: 200vh;
+}
+
+.FotoContainer2 >.fotoItemContainer:nth-child(1) > .foto{
+    background: url(./assets/4.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.FotoContainer2 >.fotoItemContainer:nth-child(2) > .foto{
+    background: url(./assets/5.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.FotoContainer2 >.fotoItemContainer:nth-child(3) > .foto{
+    background: url(./assets/6.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
