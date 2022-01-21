@@ -8,9 +8,9 @@
 
 
 :root{
-    --bg-color : #edf6f9;
+    --bg-color : #191414;
     --acc-color : #006d77;
-    --font-color : #101111;
+    --font-color : #1ed760;
 }
 ::-webkit-scrollbar {
     width: 0;  /* Remove scrollbar space */
@@ -47,7 +47,9 @@ body{
     position: relative;
     color: var(--font-color);
 }
-
+.item_container:nth-child(1){
+    text-transform: uppercase;
+}
 .title_one_container {
     position: absolute;
     top: 30px;
@@ -67,4 +69,31 @@ body{
     font-weight: 500;
     letter-spacing: -5px;
     
+}
+
+#logoContainer{
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    height: 350px;
+   
+   
+    overflow: hidden;
+    
+
+}
+#logo{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    height: 350px;
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Spotify_logo_with_text.svg/1024px-Spotify_logo_with_text.svg.png");
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+    
+
 }
