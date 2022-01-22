@@ -103,7 +103,7 @@ var tl4 = gsap.timeline({
   });
 
   tl6.to("#logoTextBox", {y: "-100px", duration: 2,ease: "power3.out" },0)
-
+  .to("#logoTextBox", {opacity: 0, duration: 2,ease: "power3.out" },1.5)
 
   const latBox = document.querySelector(".fotoAniC3");
 
@@ -133,8 +133,47 @@ var tl4 = gsap.timeline({
   });
   tl7.from(".foani", {
     opacity: 0,
+    scale: 0,
     stagger: {
-
+        grid: [7,15],
+        from: "center",
         amount: 0.9
     }
-  })
+  },0)
+  .to("#logoContainer", {
+    xPercent: 0,
+    yPercent: 0,
+    ease: "power1.in"
+    
+  },0)
+  .to("#logo", {scale: 1, rotateY: 360, rotateZ: 360,ease: "power1.in"},0.1)
+
+  var tl8 = gsap.timeline({
+    visibility: "hidden",
+    scrollTrigger: { 
+      trigger: '.main7',
+    //   pin: ".main2", 
+    //   pinSpacing: false,
+      start: "top top",
+      markers: true,
+      end: 'bottom top',
+      scrub: true,
+    },
+  });
+
+  tl8.to(".foani", {
+    opacity: 0,
+    scale: 0,
+    stagger: {
+        grid: [7,15],
+        from: "center",
+        amount: 0.9
+    }
+  },0)
+  .to("#logoContainer", {
+    xPercent: -30,
+    yPercent: 0,
+    ease: "power1.in"
+    
+  },0)
+  .to("#logo", {scale: 1, rotateY: 0, rotateZ: 360,ease: "power1.in"},0.1)
