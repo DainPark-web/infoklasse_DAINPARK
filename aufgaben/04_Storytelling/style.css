@@ -153,6 +153,22 @@ body{
     grid-gap: 20px;
     transform: translateX(100%);
 }
+.FotoContainer3{
+    width: 100vw;
+    height: 100vh;
+    /* background: red; */
+    position: fixed;
+    bottom: 0%;
+    overflow: hidden;
+
+    padding: 0px;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 20px;
+    
+    /* transform: skewX(20deg) skewY(-50deg) rotateY(30deg) rotateX(0deg) translateX(130%); */
+}
 .fotoItemContainer{
     /* background: blue; */
     height: 100%;
@@ -219,4 +235,39 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     
+}
+.FotoContainer2 >.fotoItemContainer:nth-child(4) > .foto{
+    background: url(./assets/7.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.FotoContainer2 >.fotoItemContainer:nth-child(5) > .foto{
+    background: url(./assets/8.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.FotoContainer2 >.fotoItemContainer:nth-child(6) > .foto{
+    background: url(./assets/9.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.FotoContainer3 >.fotoItemContainer:nth-child(odd) > .foto{
+    background: url(./assets/4.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.FotoContainer3 >.fotoItemContainer:nth-child(even) > .foto{
+    background: url(./assets/5.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+.main6{
+   
 }

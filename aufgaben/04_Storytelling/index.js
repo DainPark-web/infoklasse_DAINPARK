@@ -87,4 +87,54 @@ var tl4 = gsap.timeline({
       scrub: true,
     },
   });
-  tl5.to(".fotoAniC2", {xPercent: -200 })
+  tl5.to(".fotoAniC2", {xPercent: -200  }, 0)
+  .to(".fotoAniC2", {skewX: 20  }, 0.1)
+
+  var tl6 = gsap.timeline({
+    scrollTrigger: { 
+      trigger: '.main5',
+    //   pin: ".main2", 
+    //   pinSpacing: false,
+      start: "top top",
+      markers: true,
+      end: 'bottom top',
+    
+    },
+  });
+
+  tl6.to("#logoTextBox", {y: "-100px", duration: 2,ease: "power3.out" },0)
+
+
+  const latBox = document.querySelector(".fotoAniC3");
+
+  for(let i = 0; i < 60; i++){
+    const con = document.createElement("div");
+    const foto = document.createElement("div");
+    con.classList.toggle("fotoItemContainer");
+    foto.classList.toggle("foto");
+    foto.classList.toggle("foani");
+
+    con.appendChild(foto);
+
+
+    latBox.appendChild(con);
+  }
+  var tl7 = gsap.timeline({
+    visibility: "hidden",
+    scrollTrigger: { 
+      trigger: '.main6',
+    //   pin: ".main2", 
+    //   pinSpacing: false,
+      start: "top top",
+      markers: true,
+      end: 'bottom top',
+      scrub: true,
+    },
+  });
+  tl7.from(".foani", {
+    opacity: 0,
+    stagger: {
+
+        amount: 0.9
+    }
+  })
