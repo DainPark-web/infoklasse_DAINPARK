@@ -123,7 +123,18 @@ body{
     transform: translateY(0px);
 
 }
-
+.logoTextLast{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+    z-index: 3;
+    font-size: 60px;
+    font-weight: 600;
+    color: var(--font-color);
+    opacity: 0;
+}
 
 
 .FotoContainer{
@@ -255,13 +266,13 @@ body{
     
 }
 .FotoContainer3 >.fotoItemContainer:nth-child(odd) > .foto{
-    background: url(./assets/4.jpeg);
+    background: url(./assets/10.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     
 }
 .FotoContainer3 >.fotoItemContainer:nth-child(even) > .foto{
-    background: url(./assets/5.jpeg);
+    background: url(./assets/11.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     

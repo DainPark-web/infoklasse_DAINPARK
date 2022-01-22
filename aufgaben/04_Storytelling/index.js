@@ -69,7 +69,7 @@ var tl4 = gsap.timeline({
     //   pin: ".main2", 
     //   pinSpacing: false,
       start: "top top",
-      markers: true,
+    //   markers: true,
       end: 'bottom top',
     
     },
@@ -82,7 +82,7 @@ var tl4 = gsap.timeline({
     //   pin: ".main2", 
     //   pinSpacing: false,
       start: "top top",
-      markers: true,
+    //   markers: true,
       end: 'bottom top',
       scrub: true,
     },
@@ -96,7 +96,7 @@ var tl4 = gsap.timeline({
     //   pin: ".main2", 
     //   pinSpacing: false,
       start: "top top",
-      markers: true,
+    //   markers: true,
       end: 'bottom top',
     
     },
@@ -126,7 +126,7 @@ var tl4 = gsap.timeline({
     //   pin: ".main2", 
     //   pinSpacing: false,
       start: "top top",
-      markers: true,
+    //   markers: true,
       end: 'bottom top',
       scrub: true,
     },
@@ -155,7 +155,7 @@ var tl4 = gsap.timeline({
     //   pin: ".main2", 
     //   pinSpacing: false,
       start: "top top",
-      markers: true,
+    //   markers: true,
       end: 'bottom top',
       scrub: true,
     },
@@ -177,3 +177,4 @@ var tl4 = gsap.timeline({
     
   },0)
   .to("#logo", {scale: 1, rotateY: 0, rotateZ: 360,ease: "power1.in"},0.1)
+  .to(".logoTextLast", {scale: 1.4,xPercent: -100,opacity: 1,ease: "power1.in"},0.3)
