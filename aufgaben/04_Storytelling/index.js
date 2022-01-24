@@ -16,7 +16,7 @@ var tl1 = gsap.timeline({
       start: "10% top",
       markers: false,
       end: 'bottom top',
-      toggleActions:"restart complete reverse reset"
+      toggleActions:"restart complete reverse reverse"
     },
   });
 tl1.to("#title_text_01", { duration: 1,opacity: 0, ease: "power3.out"},0)
@@ -33,6 +33,7 @@ var tl2 = gsap.timeline({
       markers: false,
       end: 'bottom top',
       scrub: true,
+      toggleActions:"restart complete reverse reverse"
     },
   });
 
@@ -49,7 +50,7 @@ var tl3 = gsap.timeline({
       start: "top center",
       markers: false,
       end: 'bottom top',
-    
+      toggleActions:"restart complete reverse reverse"
     },
   });
  
@@ -70,7 +71,7 @@ var tl4 = gsap.timeline({
       start: "top top",
     //   markers: true,
       end: 'bottom top',
-    
+      toggleActions:"restart complete reverse reverse"
     },
   });
 
@@ -97,7 +98,7 @@ var tl4 = gsap.timeline({
       start: "top top",
     //   markers: true,
       end: 'bottom top',
-    
+      toggleActions:"restart complete reverse reverse"
     },
   });
 
