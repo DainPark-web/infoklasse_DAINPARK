@@ -9,14 +9,18 @@ tl.from("#title_text_02", {y: 500, duration: 2, ease: "power3.out"},0.5)
 tl.from("#title_text_02", {opacity: 0, duration: 2, ease: "power3.out"}, 0.8);
 
 var tl1 = gsap.timeline({
+  onStart :function() {console.log("start")},
+      onComplete: function() {console.log("finished")},
     scrollTrigger: { 
       trigger: '.main1',
     //   pin: ".main2", 
     //   pinSpacing: false,
       start: "10% top",
-      markers: false,
+      markers: true,
       end: 'bottom top',
-      toggleActions:"restart complete reverse reverse"
+      snap: true, //화면 자동 이동
+      toggleActions:"restart complete reverse reverse",
+      
     },
   });
 tl1.to("#title_text_01", { duration: 1,opacity: 0, ease: "power3.out"},0)
