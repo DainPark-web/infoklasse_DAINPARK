@@ -38,6 +38,9 @@ gsap
 
 
 
+# Fragen
+1. svg animation?
+
 # abgeben
 dokumentieren
 durch github page

@@ -20,9 +20,9 @@ var tl1 = gsap.timeline({
     },
   });
 tl1.to("#title_text_01", { duration: 1,opacity: 0, ease: "power3.out"},0)
-.to("#title_text_01", {xPercent: -140, duration: 2,opacity: 0, ease: "power3.out"},0.3)
+.to("#title_text_01", { xPercent: -140, duration: 2,opacity: 0, ease: "power3.out"},0.3)
 .to("#title_text_02", { duration: 1,opacity: 0, ease: "power3.out"},0)
-.to("#title_text_02", {xPercent: 140, duration: 2,opacity: 0, ease: "power3.out"},0.3)
+.to("#title_text_02", { xPercent: 140, duration: 2,opacity: 0, ease: "power3.out"},0.3)
 
 var tl2 = gsap.timeline({
     scrollTrigger: { 
@@ -58,7 +58,6 @@ tl3.from(".fotoAni",{
     duration: 1.5,
     ease: "power3.out",
     stagger: {
-
         amount: 0.3
     }
 },0)
@@ -105,6 +104,9 @@ var tl4 = gsap.timeline({
   tl6.to("#logoTextBox", {y: "-100px", duration: 2,ease: "power3.out" },0)
   .to("#logoTextBox", {opacity: 0, duration: 2,ease: "power3.out" },1.5)
 
+
+
+  // create lots of boxs with classname together 
   const latBox = document.querySelector(".fotoAniC3");
 
   for(let i = 0; i < 60; i++){
