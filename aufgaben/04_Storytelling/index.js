@@ -138,7 +138,7 @@ var tl4 = gsap.timeline({
     opacity: 0,
     scale: 0,
     stagger: {
-        grid: [7,15],
+        grid: "auto",
         from: "center",
         amount: 0.9
     }
@@ -167,11 +167,11 @@ var tl4 = gsap.timeline({
   tl8.to(".foani", {
     opacity: 0,
     scale: 0,
-    stagger: {
-        grid: [7,15],
-        from: "center",
-        amount: 0.9
-    }
+    // stagger: {
+    //     grid: "auto",
+    //     from: "random",
+    //     amount: 0.9
+    // }
   },0)
   .to("#logoContainer", {
     xPercent: -30,
