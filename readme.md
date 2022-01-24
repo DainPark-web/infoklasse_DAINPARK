@@ -34,5 +34,6 @@ https://www.javascripttutorial.net/array/javascript-sort-an-array-of-objects/
 Scrollmagic
 https://scrollmagic.io/
 moment js
+gsap
 
 
